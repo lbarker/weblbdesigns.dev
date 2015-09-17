@@ -1,0 +1,15 @@
+{
+  "name": "XYZGrunt",
+  "version": "0.3.0",
+  "author": "Lauren Barker",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "matchdep": "*"
+  }
+}
