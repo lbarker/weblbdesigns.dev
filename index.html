@@ -17,9 +17,6 @@
     <!-- Plugins CSS -->
     <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="assets/plugins/animate-css/animate.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/jquery-magnificPopup/magnific-popup.css" rel="stylesheet" type="text/css">
     
     <!-- Component CSS -->
     <link href="assets/css/component/component.css" rel="stylesheet" type="text/css">
@@ -52,11 +49,50 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 <body id="page-top" class="push push-right" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51">
    
-        <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->   
-        
+<!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->   
 
+<a href="#cd-nav" class="cd-nav-trigger">Menu 
+    <span class="cd-nav-icon"></span>
+
+    <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+        <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+    </svg>
+</a>
+
+
+<div id="cd-nav" class="cd-nav">
+        <div class="cd-navigation-wrapper">
+            <div class="cd-half-block">
+                <h2>Navigation</h2>
+
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li><a href="index.html" class="selected" data-type="page-transition">Welcome</a></li>
+                        <li><a href="project1.html" data-type="page-transition">Works</a></li>
+                        
+                    </ul>
+                </nav>
+            </div><!-- .cd-half-block -->
+            
+            <div class="cd-half-block">
+                <address>
+                    <ul class="cd-contact-info">
+                        <li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
+                        <li>0244-12345678</li>
+                        <li>
+                            <span>MyStreetName 24</span>
+                            <span>W1234X</span>
+                            <span>London, UK</span>
+                        </li>
+                    </ul>
+                </address>
+            </div> <!-- .cd-half-block -->
+        </div> <!-- .cd-navigation-wrapper -->
+</div> <!-- .cd-nav -->
+        
+<main>
     <!-- Begin Intro Section -->
     <section id="intro">
         <div id="parallax-1" class="parallax">
@@ -93,57 +129,7 @@
     <!-- //End Intro Section -->
 
 
-    <!-- Begin Navbar -->
-    <div class="navbar-trigger-open right hidden-xs hidden-sm">
-        <a href="#">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-    <!-- //.navbar-trigger-open -->
-    
-    <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top side-menu right-push-menu" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-rj-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <a class="navbar-brand" href="#page-top">L.Barker</a>
-                
-                <span class="navbar-trigger-close hidden-xs hidden-sm">
-                    <a href="#">
-                        <i class="fa fa-times"></i>
-                    </a>
-                </span>
-            </div>
-            <!-- //.navbar-header -->
-            
-            <div class="navbar-collapse collapse navbar-rj-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="page-scroll">
-                        <a href="#my-skills">Geek Skills</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#portfolio">Projects</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#timeline">Timeline</a>
-                    </li>                   
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- //.navbar-collapse -->
-        </div>
-        <!-- //.container -->
-    </nav>
-    <!-- //End Navbar -->
+   
 
     <!-- Begin My Skills Section -->
     <section id="my-skills" class="section">
@@ -938,7 +924,7 @@
             </div>
         </div>
     </div>
-   
+</main>   
    
     <!-- Plugins JS -->
     <script src="assets/plugins/jquery.min.js"></script>
@@ -947,15 +933,9 @@
     <script src="assets/plugins/smartresize/smartresize.js"></script>
     <script src="assets/plugins/jquery-easing/jquery.easing.min.js"></script>
     <script src="assets/plugins/skrollr/skrollr.min.js"></script>
-    <script src="assets/plugins/jquery-sticky/jquery.sticky.js"></script>
     <script src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
-    <script src="assets/plugins/jquery-countTo/jquery.countTo.js"></script>
-    <script src="assets/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
     <script src="assets/plugins/jquery-countdown/jquery.countdown.min.js"></script>
-    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/plugins/jquery-magnificPopup/jquery.magnific-popup.min.js"></script> 
-    <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+
     
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
@@ -965,8 +945,6 @@
     
     <!-- Component JS -->
     <script src="assets/js/component/bar-chart.js"></script>
-    <script src="assets/js/component/counters.js"></script>
-    <script src="assets/js/component/pie-chart.js"></script>
     <script src="assets/js/component/animation.js"></script>
     
     <script type="text/javascript">

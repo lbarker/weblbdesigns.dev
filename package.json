@@ -10,6 +10,8 @@
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
+    "grunt-contrib-watch": "*",
+    "node-bourbon": "*",
     "matchdep": "*"
   }
 }

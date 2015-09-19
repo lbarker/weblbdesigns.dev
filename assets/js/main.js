@@ -3,7 +3,11 @@ $(function() {
     /*---------------------------------------*/
     /*  PAGE LOADER
     /*---------------------------------------*/
-   
+    $(window).load(function(){
+        $('#page-loader').fadeOut('fast');
+    });
+    
+    
     /*---------------------------------------*/
     /*  JQUERY FOR PAGE SCROLLING FEATURE
     /*  requires jQuery Easing plugin
@@ -16,10 +20,8 @@ $(function() {
 
             var offset = $('body').attr('data-offset');
             
-            if($('.navbar.navbar-fixed-top').hasClass('side-menu') && $(window).width() >= 992){
-                $('body').data('offset', 1);
-                offset = $('body').data('offset');
-            }
+            $('body').data('offset', 1);
+            offset = $('body').data('offset');
 
             $('html, body').stop().animate({
                 scrollTop: $($anchor.attr('href')).offset().top - (offset - 1)
@@ -27,92 +29,29 @@ $(function() {
         });
     };
     
-    
-    /*---------------------------------------*/
-    /*  STICKY NAVBAR
-    /*---------------------------------------*/
-    $('.navbar.navbar-fixed-top').sticky({topSpacing: 0});
-    
-    var stickySideMenu = function(){
-        var navbar = $('.navbar.navbar-fixed-top.side-menu');
-        
-        if ($(window).width() >= 992) {        
-            navbar.unstick();
-        }
-        else
-        {
-            navbar.unstick();
-            navbar.sticky({topSpacing: 0});
-        }
-    };
-    
     pageScroll();
-    stickySideMenu();
     
     $(window).smartresize(function(){
         pageScroll();
-        stickySideMenu();
-    });
-    
-    $('.navbar-trigger-open').click(function(e) {
-        e.preventDefault();
-        $('.navbar.side-menu').toggleClass('active');
-        $('body.push.push-left').toggleClass('pushed-left');
-        $('body.push.push-right').toggleClass('pushed-right');
     });
 
-    $('.navbar-trigger-close').click(function(e) {
-        e.preventDefault();
-        $('.navbar.side-menu').toggleClass('active');
-        $('body.push.push-left').toggleClass('pushed-left');
-        $('body.push.push-right').toggleClass('pushed-right');
-    });
-    
 
-    /*---------------------------------------*/
-    /*  OWL CAROUSEL
-    /*---------------------------------------*/
-    $('#carousel-who-we-are').owlCarousel({
-        autoPlay: true,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true
-    });
+    //menu
+      var isLateralNavAnimating = false;
+      
+      //open/close lateral navigation
+      $('.cd-nav-trigger').on('click', function(event){
+        event.preventDefault();
+        //stop if nav animation is running 
+        if( !isLateralNavAnimating ) {
+          if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
+          
+          $('body').toggleClass('navigation-is-open');
+          $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+            //animation is over
+            isLateralNavAnimating = false;
+          });
+        }
+      });
     
-    
-    /*---------------------------------------*/
-    /*  CONTACT FORM REQUEST
-    /*---------------------------------------*/
-    $('.validate').validate();
-    
-    $(document).on('submit', '#contact-us-form', function(e){
-        e.preventDefault();
-        
-        $('.form-respond').html("<div class='content-message'><i class='fa fa-refresh fa-spin fa-4x'></i> <h2>Loading..</h2></div>");
-        
-        $.ajax({
-            url: $('#contact-us-form').attr('action'),
-            type: 'post',
-            dataType: 'json',
-            data: $(this).serialize(),
-            success: function(data){
-                if (data == true){
-                    $('.form-respond').html("<div class='content-message'><i class='fa fa-rocket fa-4x'></i> <h2>Email Sent Successfully</h2> <p>Your message has been submitted.</p></div>");
-                } else {
-                    $('.form-respond').html("<div class='content-message'><i class='fa fa-exclamation-circle fa-4x'></i> <h2>Error sending</h2> <p>Try again later.</p></div>");
-                }
-                
-                setTimeout(function(){
-                    $('.form-respond').html("");
-                },3000);
-            },
-            error: function(xhr, err){
-                $('.form-respond').html("<div class='content-message'><i class='fa fa-exclamation-circle fa-4x'></i> <h2>Error sending</h2> <p>Try again later.</p></div>");
-                
-                setTimeout(function(){
-                    $('.form-respond').html("");
-                },3000);
-            }
-        });
-    });
 });

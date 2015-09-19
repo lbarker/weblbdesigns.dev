@@ -27,6 +27,20 @@ module.exports = function(grunt) {
               }
           }
       },
+      // "sass"-task configuration
+      sass: {
+          development: {
+              options: {
+                // includePaths: require('node-bourbon').with('other/path', 'another/path') 
+                // - or - 
+                loadPath: require('node-bourbon').includePaths
+              },
+              files: {
+                //compiling frontend.less into frontend.css
+                "./css/nav.css":"./scss/nav.scss",
+              }
+          }
+      },
       
     });
 
