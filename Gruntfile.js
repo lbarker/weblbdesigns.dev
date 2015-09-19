@@ -37,7 +37,7 @@ module.exports = function(grunt) {
               },
               files: {
                 //compiling frontend.less into frontend.css
-                "./css/nav.css":"./scss/nav.scss",
+                "./assets/css/nav.css":"./assets/scss/nav.scss",
               }
           }
       },

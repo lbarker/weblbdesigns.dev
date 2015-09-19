@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>L.Barker - Developer</title>
@@ -24,6 +25,8 @@
     
     <!-- Main CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Nav CSS -->
+    <link href="assets/css/nav.css" rel="stylesheet" type="text/css">
     <!--<link href="assets/css/colors/blue.css" rel="stylesheet" type="text/css">-->
     
     <!-- Pace -->
@@ -40,58 +43,16 @@
     <script src="assets/plugins/pace.js/pace.js"></script>
 
     <link href="assets/plugins/pace.js/themes/pink/pace-theme-corner-indicator.css" rel="stylesheet" />
-    <!-- Modernizr JS for IE9 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+    
     <script src="assets/plugins/modernizr.min.js"></script>
-    <![endif]-->
 </head>
 
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-<body id="page-top" class="push push-right" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51">
+<body id="page-top">
    
 <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->   
 
-<a href="#cd-nav" class="cd-nav-trigger">Menu 
-    <span class="cd-nav-icon"></span>
-
-    <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
-        <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
-    </svg>
-</a>
-
-
-<div id="cd-nav" class="cd-nav">
-        <div class="cd-navigation-wrapper">
-            <div class="cd-half-block">
-                <h2>Navigation</h2>
-
-                <nav>
-                    <ul class="cd-primary-nav">
-                        <li><a href="index.html" class="selected" data-type="page-transition">Welcome</a></li>
-                        <li><a href="project1.html" data-type="page-transition">Works</a></li>
-                        
-                    </ul>
-                </nav>
-            </div><!-- .cd-half-block -->
-            
-            <div class="cd-half-block">
-                <address>
-                    <ul class="cd-contact-info">
-                        <li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
-                        <li>0244-12345678</li>
-                        <li>
-                            <span>MyStreetName 24</span>
-                            <span>W1234X</span>
-                            <span>London, UK</span>
-                        </li>
-                    </ul>
-                </address>
-            </div> <!-- .cd-half-block -->
-        </div> <!-- .cd-navigation-wrapper -->
-</div> <!-- .cd-nav -->
-        
 <main>
     <!-- Begin Intro Section -->
     <section id="intro">
@@ -766,8 +727,46 @@
         </div>
         <!-- //End Copyright -->
     </footer>
-  
+</main>    
+ <a href="#cd-nav" class="cd-nav-trigger">Menu 
+        <span class="cd-nav-icon"></span>
+
+        <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+            <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+        </svg>
+    </a>
     
+    <div id="cd-nav" class="cd-nav">
+        <div class="cd-navigation-wrapper">
+            <div class="cd-half-block">
+                <h2>Navigation</h2>
+
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li><a href="#0" class="selected">The team</a></li>
+                        <li><a href="#0">Our services</a></li>
+                        <li><a href="#0">Our projects</a></li>
+                        <li><a href="#0">Start a project</a></li>
+                        <li><a href="#0">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div><!-- .cd-half-block -->
+            
+            <div class="cd-half-block">
+                <address>
+                    <ul class="cd-contact-info">
+                        <li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
+                        <li>0244-12345678</li>
+                        <li>
+                            <span>MyStreetName 24</span>
+                            <span>W1234X</span>
+                            <span>London, UK</span>
+                        </li>
+                    </ul>
+                </address>
+            </div> <!-- .cd-half-block -->
+        </div> <!-- .cd-navigation-wrapper -->
+    </div> <!-- .cd-nav -->   
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
@@ -924,7 +923,7 @@
             </div>
         </div>
     </div>
-</main>   
+ 
    
     <!-- Plugins JS -->
     <script src="assets/plugins/jquery.min.js"></script>
