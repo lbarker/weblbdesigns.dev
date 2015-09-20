@@ -30,11 +30,7 @@ $(function() {
     };
     
     pageScroll();
-    
-    $(window).smartresize(function(){
-        pageScroll();
-    });
-
+   
 
     //menu
       var isLateralNavAnimating = false;

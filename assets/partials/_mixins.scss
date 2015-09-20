@@ -39,3 +39,12 @@
 // animation
 
 $animation-duration: 0.7s;
+
+// text-shadow
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+@mixin text-shadow($color){
+
+text-shadow: 0px 1px 1px $color;
+} 

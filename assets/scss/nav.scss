@@ -58,7 +58,7 @@ main {
 	top: 20px;
 	height: 54px;
 	width: 54px;
-	background-color: $color-1;
+	background-color: $base-color;
 	border-radius: 50%;
 	
 	/* image replacement */
@@ -74,14 +74,14 @@ main {
 		@include center; // mixin inside partials > _mixins.scss
 		width: 22px;
 		height: 2px;
-		background-color: $color-3;
+		background-color: $white;
 
 		&::before, &:after {
 			/* upper and lower lines of the menu icon */
 			content: '';
 			position: absolute;
 			top: 0;
-			right: 0;
+			left: 0;
 			width: 100%;
 			height: 100%; 
 			background-color: inherit;
@@ -95,12 +95,12 @@ main {
 		}
 
 		&::before {
-			@include transform-origin(right top);
+			@include transform-origin(left top);
 			@include transform(translateY(-6px));
 		}
 
 		&::after {
-			@include transform-origin(right bottom);
+			@include transform-origin(left bottom);
 			@include transform(translateY(6px));
 		}
 
@@ -167,7 +167,7 @@ main {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: $color-1;
+	background-color: darken($base-color,10%);
 	visibility: hidden;
 	@include transition(visibility 0s $animation-duration);
 
@@ -204,7 +204,7 @@ main {
 		margin-bottom: 1.7em;
 		font-size: 1.3rem;
 		font-weight: 800;
-		color: darken($color-1, 15%);
+		color: $white;
 		text-transform: uppercase;
 
 		&::after {
@@ -227,44 +227,22 @@ main {
 		}
 
 		a {
-			font-family: $secondary-font;
 			font-size: 2.4rem;
-			color: rgba($color-3, .3);
+			color: lighten($base-color, 30%);
+			@include text-shadow(darken($base-color, 10%));
 			display: inline-block;
 
 			&.selected {
-				color: $color-3;
+				color: lighten($base-color, 50%);
 			}
 
 			.no-touch &:hover {
-				color: $color-3;
+				color: lighten($base-color, 50%);
 			}
 		}
 	}
 
-	.cd-contact-info {
-		margin-top: 80px;
-
-		li {
-			font-family: $secondary-font;
-			margin-bottom: 1.5em;
-			line-height: 1.2;
-			color: rgba($color-3, .3);
-		}
-
-		a {
-			color: $color-3;
-		}
-
-		span {
-			display: block;
-		}
-
-		li, a, span {
-			font-size: 1.6rem;
-		}
-		
-	}
+	
 
 	@include MQ(L) {
 
@@ -298,18 +276,6 @@ main {
 			
 		}
 
-		.cd-contact-info {
-			margin-top: 120px;
-			text-align: right;
-
-			li {
-				margin-bottom: 2.4em;
-			}
-
-			li, a, span {
-				font-size: 2rem;
-			}
-		}
 	}
 }
 
