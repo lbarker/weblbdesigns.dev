@@ -11,14 +11,6 @@
 Primary style
 -------------------------------- */
 
-*, *::after, *::before {
-	@include box-sizing(border-box);
-}
-
-body, html {
-	/* prevent horizontal scrolling */
-	overflow-x: hidden;
-}
 
 /* -------------------------------- 
 Main Components 
@@ -29,7 +21,6 @@ main {
 	z-index: 2;
 
 	/* fix bug on iOS */
-	height: 100vh;
 	overflow-y: auto;
 	
 	-webkit-overflow-scrolling: touch;
@@ -54,7 +45,7 @@ main {
 .cd-nav-trigger {
 	position: fixed;
 	z-index: 3;
-	right: 5%;
+	left: 5%;
 	top: 20px;
 	height: 54px;
 	width: 54px;

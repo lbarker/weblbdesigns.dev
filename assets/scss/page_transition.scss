@@ -1,0 +1,227 @@
+
+@import 'bourbon'; // http://bourbon.io/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+/* -------------------------------- 
+
+Container Boxes 
+
+-------------------------------- */
+.cd-btn-trigger  {
+  position: fixed;
+  z-index: 3;
+  right: 5%;
+  top: 20px;
+  height: 54px;
+  width: 54px;
+  background-color: $base-color;
+  border-radius: 50%;
+  
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+
+  .cd-btn-icon {
+    /* icon created in CSS */
+    position: absolute;
+    @include center; // mixin inside partials > _mixins.scss
+    width: 22px;
+    height: 2px;
+    background-color: $white;
+
+    &::before, &:after {
+      /* upper and lower lines of the menu icon */
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+
+      height: 100%; 
+      background-color: inherit;
+
+      /* Force Hardware Acceleration in WebKit */
+      @include transform(translateZ(0));
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+
+    }
+
+    &::before {
+
+      @include transform-origin(right top);
+      @include transform(rotate(-45deg));
+    }
+
+    &::after {
+      @include transform-origin(right bottom);
+      @include transform(rotate(45deg));
+    }
+
+
+  }
+
+  .no-touch &:hover .cd-btn-icon::after {
+    @include transform(rotate(-55deg));
+  } 
+
+  .no-touch &:hover .cd-btn-icon::before {
+    @include transform(rotate(55deg));
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  circle {
+    stroke-dashoffset: 0;
+    /* circle border animation */
+    @include transition(stroke-dashoffset $animation-duration - 0.3s 0s);
+  }
+
+  
+  @include MQ(L) {
+    top: 40px;
+  }
+  
+}
+.cd-cover-layer {
+  /* layer that covers the content when the animation is triggered */
+  position: fixed;
+  @include center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: $base-color;
+  z-index:2;
+  @include transition(opacity 0.4s 0.4s, visibility 0s 0.8s);
+
+  .cd-about & {
+    background-color: $white;
+  }
+
+  .page-is-changing & {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity 0.3s 0s, visibility 0s 0s);
+  }
+
+  @include MQ(M) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.cd-loading-bar {
+  /* this is the loding bar - visible while switching from one page to the following one */
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+    top: 50%;
+  height: 2px;
+  width: 90%;
+  background-color: lighten($base-color,20%);
+  visibility: hidden;
+  @include transition(visibility 0s 0.4s, transform 0.4s 0s ease-in);
+
+  /* Force Hardware Acceleration */
+  @include backface-visibility(hidden);
+  @include transform(translateZ(0));
+
+  @include transform(translateX(-50%) translateY(-50%));
+
+  .cd-about & {
+    background-color: $white;
+
+    &::before {
+      background-color: $white;
+    }
+  }
+
+  &::before {
+    /* this is the progress bar inside the loading bar */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lighten($base-color,40%);
+
+    /* Force Hardware Acceleration */
+    @include backface-visibility(hidden);
+    @include transform(translateZ(0));
+
+    @include transform(scaleX(0));
+    @include transform-origin(left center);
+  }
+
+  .page-is-changing & {
+    visibility: visible;
+    @include transform(translateX(-50%) translateY(-50%) scaleX(.3));
+    @include transition(visibility 0s 0.3s, transform 0.4s 0.4s);
+
+    &::before {
+      @include transform(scaleX(1));
+      @include transition(transform 0.8s 0.8s ease-in);
+    }
+  }
+
+  @include MQ(M) {
+    width: 100%;
+  }
+}
+
+.cd-main-content{
+
+    .portfolio-page {
+      position: relative;
+      height: calc(100vh);
+      padding-top:50px;
+      @include MQ(S) {
+        padding-top:0px;
+      }
+      > .section {
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        p {a {
+          color:$color-3;
+        }}
+
+      }
+    }
+}
+.cd-about{
+
+    .portfolio-page {
+      position: relative;
+      height: calc(100vh);
+      padding-top:50px;
+      @include MQ(S) {
+        padding-top:0px;
+      }
+      > .section {
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        p {a {
+          color:$color-3;
+        }}
+
+
+      }
+    }
+}

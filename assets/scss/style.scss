@@ -62,6 +62,23 @@ p {
     margin: 0 0 15px;
 }
 
+/*---------------------------------------------------------------------*/
+/*  1. BUTTON
+/*---------------------------------------------------------------------*/
+.btn.btn-lb {
+    background-color: $base-color;
+    color: #fff;
+    border-color: lighten($base-color, 5%);
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: darken($base-color, 5%);
+    }
+}
+
+
 .section {
     background-color: #f2f4f4;
     
@@ -121,7 +138,7 @@ p {
 }
 
 .section.section-bgimage-yes {
-    background-color: #222;
+    background-color: $body-bg;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -159,6 +176,14 @@ p {
             opacity: 0.6;
             filter: alpha(opacity=60);
             -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+        }
+        .section-title {
+        color: $white;
+    
+        }
+
+        .section-line {
+            background-color: $white;
         }
     }
 }
@@ -200,20 +225,21 @@ p {
     position: relative;
     display: table;
     width: 100%;
-    height: auto;
+    height: 100vh;
     color: #fff;
-    background-image: url("../img/header_bkg.jpg");
+    background-image: url("/assets/img/header_bkg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     @background-size: cover;
-    
-    z-index: 2;
-    
-
-    @media(min-width:1280px) {
-        height: 100%;
-        padding: 0px;
+    z-index:2;
+    &:before {
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
     }
+    
     
 
     .intro-body {
@@ -228,23 +254,7 @@ p {
             padding-bottom: 20px;
         }
 
-        .logo {
-            > h1 {
-                display: block;
-                width: 110px;
-                height: 110px;
-                line-height: 110px;
-                color: rgba(255, 255, 255, 0.8);
-                font-family: 'Raleway', sans-serif;
-                font-size: 80px;
-                font-weight: 700;
-                text-align: center;
-                border: 2px solid rgba(255, 255, 255, 0.8);
-                border-top-right-radius: 10px;
-                border-bottom-left-radius: 10px;
-                margin: auto;
-            }
-        }
+    
         
         .intro-text {
             margin-top: 40px;
@@ -277,15 +287,7 @@ p {
             @media(min-width:768px) {
                 margin-top: 50px;
             }
-            
-            a.btn {
-                font-family: 'Raleway', sans-serif;
-                
-                @media(min-width:768px) {
-                    padding: 20px 25px;
-                    font-size: 22px;
-                }
-            }
+
         }
     }
 }
@@ -333,27 +335,127 @@ p {
     
 }
 
+/*---------------------------------------------------------------------*/
+/*  10. PORTFOLIO
+/*---------------------------------------------------------------------*/
 
-/*---------------------------------------------------------------------*/
-/*  7. MY WORK SECTION
-/*---------------------------------------------------------------------*/
-#my-work {
-    > .section-inner {
-        .parallax {
-            > .bcg {
-                background-image: url("../img/bg-quote.jpg");
-            }
+
+.popup-portfolio {
+    margin: 0 auto;
+    
+    .portfolio-item {
+        width: 270px;
+    
+        @media(min-width:600px) {
+            width: 50%;
         }
         
-        .section-content {
-            padding-top: 100px;
-            padding-bottom: 80px;
-            color: #b7ada4;
-            
-            
+       
+    }
+}
+
+
+
+.portfolio-item {
+    margin-bottom: 15px;
+    float:left;
+    > .inner-content {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        
+        &:hover {
+            cursor: pointer;
+
+            > .portfolio-content {
+                display: block;
+            }
+        }
+
+        > .portfolio-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            background-color: #000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=70)";
+            -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+
+            > .portfolio-detail {
+                width: 100%;
+                height: 100%;
+                
+                a {
+                    text-align: center;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    
+                    > .portfolio-text {
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding: 0 15px;
+                        color: #fff;
+                        letter-spacing: 0.2em;
+
+                        h4 {
+                            text-transform: uppercase;
+                            font-size: 20px;
+                            font-weight: 300;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+        > img {
+            -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
     }
 }
+
+.portfolio-page{
+    color:$white;
+
+
+}
+/*---------------------------------------------------------------------*/
+/*  10.1. PORTFOLIO HOVER EFFECT 1 - GROW 
+/*---------------------------------------------------------------------*/
+.portfolio-item.grow {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
 
 /*---------------------------------------------------------------------*/
 /*  8. TIMELINE

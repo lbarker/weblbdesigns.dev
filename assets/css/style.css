@@ -15,7 +15,7 @@ body, html {
   height: 100%; }
 
 body {
-  background-color: #f2f4f4;
+  background-color: #1a1a1a;
   font-family: "Raleway", sans-serif;
   color: #222;
   overflow-x: hidden; }
@@ -49,6 +49,18 @@ p {
   font-weight: 400;
   line-height: 1.6;
   margin: 0 0 15px; }
+
+/*---------------------------------------------------------------------*/
+/*  1. BUTTON
+/*---------------------------------------------------------------------*/
+.btn.btn-lb {
+  background-color: #642639;
+  color: #fff;
+  border-color: #762d44;
+  text-transform: uppercase; }
+  .btn.btn-lb:hover, .btn.btn-lb:focus {
+    color: #fff;
+    background-color: #521f2e; }
 
 .section {
   background-color: #f2f4f4; }
@@ -93,7 +105,7 @@ p {
         background-color: #222; }
 
 .section.section-bgimage-yes {
-  background-color: #222;
+  background-color: #1a1a1a;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -127,6 +139,10 @@ p {
     opacity: 0.6;
     filter: alpha(opacity=60);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)"; }
+  .section.section-bgimage-yes > .section-inner .section-title {
+    color: #ffffff; }
+  .section.section-bgimage-yes > .section-inner .section-line {
+    background-color: #ffffff; }
 
 /*---------------------------------------------------------------------*/
 /*  2. ANIMATION DELAY
@@ -178,17 +194,19 @@ p {
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
+  height: 100vh;
   color: #fff;
-  background-image: url("../img/header_bkg.jpg");
+  background-image: url("/assets/img/header_bkg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   @background-size : cover;
   z-index: 2; }
-  @media (min-width: 1280px) {
-    #intro {
-      height: 100%;
-      padding: 0px; } }
+  #intro:before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); }
   #intro .intro-body {
     position: relative;
     display: table-cell;
@@ -199,20 +217,6 @@ p {
       #intro .intro-body {
         padding-top: 0px;
         padding-bottom: 20px; } }
-    #intro .intro-body .logo > h1 {
-      display: block;
-      width: 110px;
-      height: 110px;
-      line-height: 110px;
-      color: rgba(255, 255, 255, 0.8);
-      font-family: 'Raleway', sans-serif;
-      font-size: 80px;
-      font-weight: 700;
-      text-align: center;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      margin: auto; }
     #intro .intro-body .intro-text {
       margin-top: 40px;
       font-family: 'Raleway', sans-serif; }
@@ -235,12 +239,6 @@ p {
       @media (min-width: 768px) {
         #intro .intro-body .page-scroll {
           margin-top: 50px; } }
-      #intro .intro-body .page-scroll a.btn {
-        font-family: 'Raleway', sans-serif; }
-        @media (min-width: 768px) {
-          #intro .intro-body .page-scroll a.btn {
-            padding: 20px 25px;
-            font-size: 22px; } }
 
 /*---------------------------------------------------------------------*/
 /*  6. MY SKILLS SECTION
@@ -267,14 +265,86 @@ p {
           font-size: 21px; } }
 
 /*---------------------------------------------------------------------*/
-/*  7. MY WORK SECTION
+/*  10. PORTFOLIO
 /*---------------------------------------------------------------------*/
-#my-work > .section-inner .parallax > .bcg {
-  background-image: url("../img/bg-quote.jpg"); }
-#my-work > .section-inner .section-content {
-  padding-top: 100px;
-  padding-bottom: 80px;
-  color: #b7ada4; }
+.popup-portfolio {
+  margin: 0 auto; }
+  .popup-portfolio .portfolio-item {
+    width: 270px; }
+    @media (min-width: 600px) {
+      .popup-portfolio .portfolio-item {
+        width: 50%; } }
+
+.portfolio-item {
+  margin-bottom: 15px;
+  float: left; }
+  .portfolio-item > .inner-content {
+    position: relative;
+    display: block;
+    overflow: hidden; }
+    .portfolio-item > .inner-content:hover {
+      cursor: pointer; }
+      .portfolio-item > .inner-content:hover > .portfolio-content {
+        display: block; }
+    .portfolio-item > .inner-content > .portfolio-content {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      background-color: #000;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=70)";
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0); }
+      .portfolio-item > .inner-content > .portfolio-content > .portfolio-detail {
+        width: 100%;
+        height: 100%; }
+        .portfolio-item > .inner-content > .portfolio-content > .portfolio-detail a {
+          text-align: center;
+          display: table;
+          width: 100%;
+          height: 100%; }
+          .portfolio-item > .inner-content > .portfolio-content > .portfolio-detail a > .portfolio-text {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 15px;
+            color: #fff;
+            letter-spacing: 0.2em; }
+            .portfolio-item > .inner-content > .portfolio-content > .portfolio-detail a > .portfolio-text h4 {
+              text-transform: uppercase;
+              font-size: 20px;
+              font-weight: 300;
+              margin-bottom: 10px; }
+            .portfolio-item > .inner-content > .portfolio-content > .portfolio-detail a > .portfolio-text p {
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: 300;
+              margin-bottom: 0px; }
+    .portfolio-item > .inner-content > img {
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0); }
+
+.portfolio-page {
+  color: #ffffff; }
+
+/*---------------------------------------------------------------------*/
+/*  10.1. PORTFOLIO HOVER EFFECT 1 - GROW 
+/*---------------------------------------------------------------------*/
+.portfolio-item.grow > .inner-content:hover > img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); }
 
 /*---------------------------------------------------------------------*/
 /*  8. TIMELINE
