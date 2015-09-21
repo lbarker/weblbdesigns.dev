@@ -31,12 +31,12 @@ a {
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    color:lighten( $base-color, 20%);
+    color:$color-3;
     &:hover, 
     &:focus {
         outline: none;
         text-decoration: none;
-        color:lighten( $base-color, 40%);
+        color:lighten( $color-3, 40%);
 
     }
 }

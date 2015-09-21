@@ -233,13 +233,27 @@ main {
       margin: 1.6em 0; }
     .cd-nav .cd-primary-nav a {
       font-size: 2.4rem;
-      color: #c3607e;
+      color: #D96459;
       text-shadow: 0px 1px 1px #3f1824;
       display: inline-block; }
       .cd-nav .cd-primary-nav a.selected {
         color: #dfaaba; }
       .no-touch .cd-nav .cd-primary-nav a:hover {
         color: #dfaaba; }
+  .cd-nav .social-icons {
+    margin-top: 60px; }
+  .cd-nav .cd-contact-info {
+    text-align: right; }
+    .cd-nav .cd-contact-info li {
+      margin-bottom: 1.5em;
+      line-height: 1.2;
+      color: rgba(217, 100, 89, 0.3); }
+    .cd-nav .cd-contact-info a {
+      color: #D96459; }
+    .cd-nav .cd-contact-info span {
+      display: block; }
+    .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
+      font-size: 1.6rem; }
   @media only screen and (min-width: 1170px) {
     .cd-nav .cd-navigation-wrapper {
       padding: 62px 20%; }
@@ -258,7 +272,15 @@ main {
     .cd-nav .cd-primary-nav li {
       margin: 2em 0; }
     .cd-nav .cd-primary-nav a {
-      font-size: 4.4rem; } }
+      font-size: 4.4rem; }
+    .cd-nav .cd-contact-info {
+      margin-top: 60px;
+      text-align: right; }
+      .cd-nav .cd-contact-info li {
+        margin-bottom: 2.4em;
+        list-style: none; }
+      .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
+        font-size: 2rem; } }
 
 .no-js main {
   height: auto;

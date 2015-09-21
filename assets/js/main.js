@@ -115,6 +115,8 @@ jQuery(document).ready(function(event){
         section.load(url+' .cd-main-content > *', function(event){
         // load new content and replace <main> content with the new one
             $('main').html(section);
+
+
             //if browser doesn't support CSS transitions - dont wait for the end of transitions
             var delay = ( transitionsSupported() ) ? 1200 : 0;
             setTimeout(function(){
@@ -139,16 +141,22 @@ jQuery(document).ready(function(event){
 
             //close menu 
             $('body').removeClass('navigation-is-open');
+            loadNewNav(url, bool);
         });
     }
 
-    //function loadNewNav(bool) {
-        //var nav = $('<div class="cd-primary-nav"></div>');
-        //nav.load('.cd-primary-nav > *'){
-            //$('nav').html(nav);
+    function loadNewNav(url, bool) {
+        url = ('' == url) ? 'index.html' : url;
+        var newNav = 'cd-nav'+url.replace('.html', '');
+        var nav = $('<div class="cd-primary-nav '+newNav+'"></div>');
+       
+        nav.load(url+' .cd-primary-nav > *', function(event){
+        // load new content and replace <main> content with the new one
+            $('nav').html(nav);
+    
+        });
+    }
 
-        //});
-    //}
  
     function transitionsSupported() {
         return $('html').hasClass('csstransitions');

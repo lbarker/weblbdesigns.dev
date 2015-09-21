@@ -12,7 +12,7 @@ Container Boxes
 
 -------------------------------- */
 .cd-btn-trigger  {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   right: 5%;
   top: 20px;
@@ -194,33 +194,6 @@ Container Boxes
         overflow: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-
-        p {a {
-          color:$color-3;
-        }}
-
-      }
-    }
-}
-.cd-about{
-
-    .portfolio-page {
-      position: relative;
-      height: calc(100vh);
-      padding-top:50px;
-      @include MQ(S) {
-        padding-top:0px;
-      }
-      > .section {
-        height: 100%;
-        overflow: hidden;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-
-        p {a {
-          color:$color-3;
-        }}
-
 
       }
     }

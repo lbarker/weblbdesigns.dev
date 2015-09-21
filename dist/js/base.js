@@ -175,16 +175,11 @@ jQuery(document).ready(function(event){
         url = ('' == url) ? 'index.html' : url;
         var newSection = 'cd-'+url.replace('.html', '');
         var section = $('<div class="cd-main-content '+newSection+'"></div>');
-        var nav = $('<div class="cd-primary-nav '+newSection+'"></div>');
-
-        section.load(url+' .cd-primary-nav > *', function(event){
-        // load new content and replace <main> content with the new one
-            $('.cd-primary-nav').html(nav);
-        });
-
+       
         section.load(url+' .cd-main-content > *', function(event){
         // load new content and replace <main> content with the new one
             $('main').html(section);
+
 
             //if browser doesn't support CSS transitions - dont wait for the end of transitions
             var delay = ( transitionsSupported() ) ? 1200 : 0;
@@ -210,9 +205,23 @@ jQuery(document).ready(function(event){
 
             //close menu 
             $('body').removeClass('navigation-is-open');
+            loadNewNav(url, bool);
         });
     }
 
+    function loadNewNav(url, bool) {
+        url = ('' == url) ? 'index.html' : url;
+        var newNav = 'cd-nav'+url.replace('.html', '');
+        var nav = $('<div class="cd-primary-nav '+newNav+'"></div>');
+       
+        nav.load(url+' .cd-primary-nav > *', function(event){
+        // load new content and replace <main> content with the new one
+            $('nav').html(nav);
+    
+        });
+    }
+
+ 
     function transitionsSupported() {
         return $('html').hasClass('csstransitions');
     }

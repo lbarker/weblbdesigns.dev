@@ -26,11 +26,11 @@ a {
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  color: #ae4263; }
+  color: #D96459; }
   a:hover, a:focus {
     outline: none;
     text-decoration: none;
-    color: #d1859c; }
+    color: white; }
 
 h1,
 h2,

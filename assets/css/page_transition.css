@@ -7,7 +7,7 @@ Container Boxes
 
 -------------------------------- */
 .cd-btn-trigger {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   right: 5%;
   top: 20px;
@@ -225,22 +225,5 @@ Container Boxes
     overflow: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
-    .cd-main-content .portfolio-page > .section p a {
-      color: #D96459; }
-
-.cd-about .portfolio-page {
-  position: relative;
-  height: calc(100vh);
-  padding-top: 50px; }
-  @media only screen and (min-width: 480px) {
-    .cd-about .portfolio-page {
-      padding-top: 0px; } }
-  .cd-about .portfolio-page > .section {
-    height: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch; }
-    .cd-about .portfolio-page > .section p a {
-      color: #D96459; }
 
 /*# sourceMappingURL=page_transition.css.map */
