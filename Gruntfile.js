@@ -36,6 +36,7 @@ module.exports = function(grunt) {
           src: [
             'assets/plugins/jquery.min.js',
             'assets/plugins/bootstrap/js/bootstrap.min.js',
+            'assets/plugins/detectmobilebrowser/detectmobilebrowser.js',
             'assets/plugins/jquery-inview/jquery.inview.min.js',
             'assets/plugins/jquery-easing/jquery.easing.min.js',
             'assets/js/main.js',

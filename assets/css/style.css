@@ -1,4 +1,3 @@
-/* IMPORT VARIABLES */
 /*---------------------------------------*/
 /*  VARIABLES
 /*---------------------------------------*/
@@ -193,13 +192,14 @@ p {
 #intro {
   position: relative;
   display: table;
-  width: 100%;
-  height: 100vh;
   color: #fff;
   background-image: url("/assets/img/header_bkg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  @background-size : cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   z-index: 2; }
   #intro:before {
     position: absolute;
@@ -207,6 +207,12 @@ p {
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.4); }
+  @media only screen and (min-width: 1170px) {
+    #intro {
+      height: 100%;
+      padding: 0px;
+      width: 100%;
+      height: 100vh; } }
   #intro .intro-body {
     position: relative;
     display: table-cell;
@@ -268,10 +274,15 @@ p {
 /*  10. PORTFOLIO
 /*---------------------------------------------------------------------*/
 .popup-portfolio {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
   .popup-portfolio .portfolio-item {
-    width: 270px; }
-    @media (min-width: 600px) {
+    width: 100%; }
+    @media only screen and (min-width: 480px) {
+      .popup-portfolio .portfolio-item {
+        width: 45%;
+        margin: 2.5%; } }
+    @media only screen and (min-width: 768px) {
       .popup-portfolio .portfolio-item {
         width: 50%; } }
 
@@ -282,12 +293,12 @@ p {
     position: relative;
     display: block;
     overflow: hidden; }
-    .portfolio-item > .inner-content:hover {
-      cursor: pointer; }
-      .portfolio-item > .inner-content:hover > .portfolio-content {
-        display: block; }
+    @media only screen and (min-width: 768px) {
+      .portfolio-item > .inner-content:hover {
+        cursor: pointer; }
+        .portfolio-item > .inner-content:hover > .portfolio-content {
+          display: block; } }
     .portfolio-item > .inner-content > .portfolio-content {
-      display: none;
       position: absolute;
       top: 0;
       right: 0;
@@ -304,6 +315,9 @@ p {
       transition-property: transform;
       -webkit-transform: translateZ(0);
       transform: translateZ(0); }
+      @media only screen and (min-width: 768px) {
+        .portfolio-item > .inner-content > .portfolio-content {
+          display: none; } }
       .portfolio-item > .inner-content > .portfolio-content > .portfolio-detail {
         width: 100%;
         height: 100%; }
@@ -536,9 +550,18 @@ footer.footer {
           font-size: 80px;
           line-height: 80px; } }
     .timeline > li > .timeline-date {
-      margin-top: 50px; }
+      margin-top: 10px; }
+      .timeline > li > .timeline-date p {
+        color: #642639;
+        text-shadow: 1px 1px #89344e;
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 0px; }
       @media (min-width: 768px) {
         .timeline > li > .timeline-date {
+          margin-top: 50px;
           position: absolute;
           left: 60%; }
           .timeline > li > .timeline-date > p {
@@ -584,9 +607,10 @@ footer.footer {
         color: #fff;
         background-color: #642636; } }
   .timeline > li.timeline-inverted > .timeline-date {
-    margin-top: 50px; }
+    margin-top: 10px; }
     @media (min-width: 768px) {
       .timeline > li.timeline-inverted > .timeline-date {
+        margin-top: 50px;
         position: absolute;
         width: 44%;
         left: 0px; }

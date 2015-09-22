@@ -239,7 +239,11 @@ main {
 		margin-top:60px;
 	}
 	.cd-contact-info {
-		text-align: right;
+		text-align: left;
+		@include MQ(S) {
+			text-align: right;
+
+		}
 		
 
 		li {

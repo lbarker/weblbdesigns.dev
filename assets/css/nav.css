@@ -243,7 +243,10 @@ main {
   .cd-nav .social-icons {
     margin-top: 60px; }
   .cd-nav .cd-contact-info {
-    text-align: right; }
+    text-align: left; }
+    @media only screen and (min-width: 480px) {
+      .cd-nav .cd-contact-info {
+        text-align: right; } }
     .cd-nav .cd-contact-info li {
       margin-bottom: 1.5em;
       line-height: 1.2;
