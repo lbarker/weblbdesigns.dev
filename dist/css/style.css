@@ -231,7 +231,7 @@ p {
     position: absolute;
     content: " ";
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: rgba(0, 0, 0, 0.4); }
   @media only screen and (min-width: 1170px) {
     #intro {
@@ -728,7 +728,7 @@ main {
 .cd-nav-trigger {
   position: fixed;
   z-index: 3;
-  left: 5%;
+  right: 5%;
   top: 20px;
   height: 54px;
   width: 54px;
@@ -865,7 +865,7 @@ main {
     height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 40px 5% 40px calc(5% + 80px);
+    padding: 40px 5% 40px 5%;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
@@ -1006,7 +1006,7 @@ Container Boxes
 .cd-btn-trigger {
   position: absolute;
   z-index: 3;
-  right: 5%;
+  left: 5%;
   top: 20px;
   height: 54px;
   width: 54px;

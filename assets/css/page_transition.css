@@ -9,7 +9,7 @@ Container Boxes
 .cd-btn-trigger {
   position: absolute;
   z-index: 3;
-  right: 5%;
+  left: 5%;
   top: 20px;
   height: 54px;
   width: 54px;

@@ -45,7 +45,7 @@ main {
 .cd-nav-trigger {
 	position: fixed;
 	z-index: 3;
-	left: 5%;
+	right: 5%;
 	top: 20px;
 	height: 54px;
 	width: 54px;
@@ -167,7 +167,7 @@ main {
 		height: 100%;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		padding: 40px 5% 40px calc(5% + 80px);
+		padding: 40px 5% 40px 5%;
 		
 		/* Force Hardware Acceleration in WebKit */
 		@include transform(translateZ(0));
