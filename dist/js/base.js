@@ -205,9 +205,6 @@ jQuery(document).ready(function(event){
             //close menu 
             $('body').removeClass('navigation-is-open');
             loadNewNav(url, bool);
-
-            //timeline
-            $("a.timeline_nav").click();
         });
     }
 
@@ -242,9 +239,8 @@ $(function(){
         /*  INTRO SECTION
         /*---------------------------------------*/
         $('#intro > .intro-body .intro-content').css('opacity', 0).one('inview', function(isInView){
-            if (isInView) {$(this).addClass('animated fadeInLeft').css('opacity', 1);}
+            if (isInView) {$(this).addClass('animated bounceIn').css('opacity', 1);}
         });
-
 
         /*---------------------------------------*/
         /*  TIMELINE
@@ -279,9 +275,11 @@ $(function(){
     };
     
     if (jQuery.browser.mobile === false && !isAndroid){
-        $('.bar-chart').one('inview', function(isInView){
+        $('.bar-chart').css('opacity', 0).one('inview', function(isInView){
             if (isInView) {
+                $(this).css('opacity', 1);
                 skills();
+
             }
         });
     }
