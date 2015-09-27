@@ -205,6 +205,9 @@ jQuery(document).ready(function(event){
             //close menu 
             $('body').removeClass('navigation-is-open');
             loadNewNav(url, bool);
+
+            //timeline
+            $("a.timeline_nav").click();
         });
     }
 
@@ -285,8 +288,5 @@ $(function(){
     else{
         skills();
     }
-    
-    $(window).smartresize(function(){
-        skills();
-    });
+
 });

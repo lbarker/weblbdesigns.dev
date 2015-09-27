@@ -57,8 +57,5 @@ $(function(){
     else{
         skills();
     }
-    
-    $(window).smartresize(function(){
-        skills();
-    });
+
 });

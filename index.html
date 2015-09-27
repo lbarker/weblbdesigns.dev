@@ -41,6 +41,7 @@
                         <div class="page-scroll">
                             <a href="#my-skills" class="btn btn-lg btn-lb">Tell Me More</a>
                         </div>
+                    
 
                         <!-- //.page-scroll -->
                     </div>
@@ -776,16 +777,7 @@
         $(window).load(function(){
             var ua = navigator.userAgent.toLowerCase(),
             isAndroid = ua.indexOf("android") > -1;
-            
-            if (jQuery.browser.mobile === false && !isAndroid){
-                // This is for Parallax using Skrollr
-                var s = skrollr.init({
-                    forceHeight: false
-                });
-
-                // Refresh Skrollr after resizing our sections
-                s.refresh($('.parallax'));
-            }
+        
         });
     });
 </script>
