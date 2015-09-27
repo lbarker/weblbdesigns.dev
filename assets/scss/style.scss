@@ -58,7 +58,7 @@ img {
 }
 
 p {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
     margin: 0 0 15px;
@@ -180,12 +180,11 @@ p {
             -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
         }
         .section-title {
-        color: $white;
-    
-        }
+            color: #b7ada4;
 
-        .section-line {
-            background-color: $white;
+            > .section-line {
+                background-color: #b7ada4;
+            }
         }
     }
 }
@@ -274,20 +273,25 @@ p {
                 color: #fff;    
                 font-size: 50px;
                 font-weight: 900;
-                
+                color: $light-text-color;    
+
                 @media(min-width:768px) {
                     font-size: 55px;
                 }
             }
             
             p.lead {
-                color: #fff;    
+                color: $white;    
                 font-size: 22px;
                 font-weight: 300;
                 
                 @media(min-width:768px) {
                     font-size: 26px;
                 }
+            }
+
+            p {
+                font-weight: 300;
             }
         }
 
@@ -362,6 +366,8 @@ p {
         }
         @include MQ(M) { 
             width: 50%;
+            margin:0%;
+
         }
         
        
@@ -482,17 +488,16 @@ p {
     > .section-inner {
         .section-content {
             padding-top: 100px;
-            color: #fff;
+            .section-title {
+                color: #b7ada4;
+
+                > .section-line {
+                    background-color: #b7ada4;
+                }
+            }
         }
 
-        .section-title {
-            color: #fff;
-            
-        }
 
-        .section-line {
-            background-color: #fff;
-        }
     }
 }
 

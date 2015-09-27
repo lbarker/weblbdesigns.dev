@@ -6,7 +6,7 @@
 <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>L.Barker - Front-End Developer</title>
+    <title>L.Barker - Front-End Developer | Designer | {Non} Unicorn</title>
     <meta name="description" content="">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Google Font -->
@@ -33,7 +33,8 @@
                     
                         <div class="intro-text">
                             <h2>Lauren Barker</h2>
-                            <p class="lead">Front-end developer &amp; ocean sport enthusiast.</p>
+                            <h3><strong>Front-end {</strong>something<strong>}</strong></h3>
+                            <p class="lead">I am well versed in HTML, CSS, jQuery, Git, and comfortable working in the LAMP stack. I can even write some code and do a little PHP. But javascript end-to-end single page apps? Well, I have alot to learn there.</p>
                         </div>
                         <!-- //.intro-text -->
 
@@ -78,14 +79,13 @@
                     <div class="col-md-5">
                         <div class="bar-chart-text">
                             <p class="lead">
-                                I’m a front-end developer with a open mind towards new technologies who enjoys building web applications that help end users achieve their goals. 
-                            </p>
+                                I’m a <strong>front-end {</strong>something<strong>}</strong>. I used to think the word "developer" belonged behind that since I have been working and developing within all parts of a LAMP stack for the past 3 years. But after reading <a href="https://css-tricks.com/the-front-end-developers-dilemma/"  target="_blank">this article on CSS Tricks</a> along with <a href="the-shifting-definition-of-front-end-developer" target="_blank">this article</a> about the shifting definition of the front-end developer, i'm not really sure anymore.</p>
 
-                            <p>
-                                In my 7 years of professional web development experience, this has involved everything from sketching wireframes on paper to scaling web applications for large audiences.</p>
-                            <p>Currently, I'm looking to join an amazing team and advance my development career by collaborating on interesting web projects. If you're interested in helping me make this happen, <a href="#cd-nav" class="fire-nav">let's get in touch</a>.
+                            <p>My focus and experiene is with building the UX of web experiences. My <strong>javascript experience is primarily with jQuery</strong> and not javascript MVC frameworks. However, I'm open towards learning new technologies and will be experimenting with <a href="https://github.com/linnovate/mean" target="_blank">the MEAN stack</a> to start getting a grip on it. 
                             </p>
-                            <p>When I'm not building clean mean code, I am enjoying life on the Central Coast to the fullest whether it be surfing, competitively racing with Pale Kai Outrigger, or enjoying quality time with family and friends. </p>
+                
+                            <p>Currently, I'm looking to join a team and collaborate on web projects utilizing modern web technologies. Most importantly, I want to keep learning and have fun while doing it. If you're interested in helping me make this happen, <a href="#cd-nav" class="fire-nav">let's get in touch</a>.</p>
+                            <p>Web development is something I enjoy doing but it is not my reason for living. Building awesome web experiences is fun but what really drives me through life is reeling left beach breaks, paddling outriggers, and steep deep freshies wherever the snow falls.</p>
                         </div>
                         <!-- //.bar-chart-text -->
                     </div>
@@ -95,38 +95,47 @@
 
                         <!-- Begin Bar Chart -->
                         <div class="bar-chart">
-                            <div class="bar-chart-item" data-percent="96">
+                            <div class="bar-chart-item" data-percent="90">
                                 <p>HTML</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
-                            <div class="bar-chart-item" data-percent="92">
+                            <div class="bar-chart-item" data-percent="89">
                                 <p>CSS / LESS</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
-                            <div class="bar-chart-item" data-percent="95">
+                            <div class="bar-chart-item" data-percent="85">
                                 <p>Bootstrap</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
-                            <div class="bar-chart-item" data-percent="60">
+                            <div class="bar-chart-item" data-percent="30">
                                 <p>Javascript</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
-                            <div class="bar-chart-item" data-percent="40">
+                            <div class="bar-chart-item" data-percent="35">
                                 <p>PHP</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
-                            <div class="bar-chart-item" data-percent="40">
+                            <div class="bar-chart-item" data-percent="28">
                                 <p>MySQL</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
+                            <div class="bar-chart-item" data-percent="70">
+                                <p>Git</p>
+                            </div>
+                            <!-- //.bar-chart-item -->
+
+                            <div class="bar-chart-item" data-percent="50">
+                                <p>Grunt</p>
+                            </div>
+
                             <div class="bar-chart-item" data-percent="72">
-                                <p>Project Management (web)</p>
+                                <p>Project Management</p>
                             </div>
                             <!-- //.bar-chart-item -->
 
@@ -310,7 +319,7 @@
                                 <div class="section-title text-center">
                                     <h3 class="main-title">About Me</h3>
 
-                                    <h4 class="sub-title">Front-End Developer and Ocean Sport Enthusiast</h4>
+                                    <h4 class="sub-title">H<sub>2</sub>0 por favor! I'll take it crystalline or liquid</h4>
 
                                     <span class="section-line"></span>
                                 </div>
@@ -768,9 +777,19 @@
             var ua = navigator.userAgent.toLowerCase(),
             isAndroid = ua.indexOf("android") > -1;
             
+            if (jQuery.browser.mobile === false && !isAndroid){
+                // This is for Parallax using Skrollr
+                var s = skrollr.init({
+                    forceHeight: false
+                });
+
+                // Refresh Skrollr after resizing our sections
+                s.refresh($('.parallax'));
+            }
         });
     });
 </script>
+
 <div class="cd-cover-layer"></div>
 <div class="cd-loading-bar"></div>    
 <script src="dist/js/base.min.js"></script>

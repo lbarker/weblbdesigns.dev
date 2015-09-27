@@ -99,6 +99,18 @@ Container Boxes
     .cd-btn-trigger {
       top: 40px; } }
 
+span.cd-btn-trigger-next {
+  position: absolute;
+  z-index: 3;
+  left: 5%;
+  top: 6px;
+  font-size: 12px;
+  color: #e6e6e6;
+  background: #1a1a1a; }
+  @media only screen and (min-width: 1170px) {
+    span.cd-btn-trigger-next {
+      top: 10px; } }
+
 .cd-cover-layer {
   /* layer that covers the content when the animation is triggered */
   position: fixed;
@@ -215,7 +227,7 @@ Container Boxes
 
 .cd-main-content .portfolio-page {
   position: relative;
-  height: calc(100vh);
+  height: 100vh;
   padding-top: 50px; }
   @media only screen and (min-width: 480px) {
     .cd-main-content .portfolio-page {

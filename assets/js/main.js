@@ -1,13 +1,5 @@
 jQuery(document).ready(function(event){
     /*---------------------------------------*/
-    /*  PAGE LOADER
-    /*---------------------------------------*/
-    $(window).load(function(){
-        $('#page-loader').fadeOut('fast');
-    });
-    
-    
-    /*---------------------------------------*/
     /*  JQUERY FOR PAGE SCROLLING FEATURE
     /*  requires jQuery Easing plugin
     /*---------------------------------------*/

@@ -40,9 +40,7 @@ module.exports = function(grunt) {
             'assets/plugins/jquery-inview/jquery.inview.min.js',
             'assets/plugins/jquery-easing/jquery.easing.min.js',
             'assets/js/main.js',
-            'assets/js/animation.js',
-            'assets/js/component/bar-chart.js',
-            'assets/js/component/animation.js'
+            'assets/js/animation.js'
           ],
           dest: 'dist/js/base.js',
         },
