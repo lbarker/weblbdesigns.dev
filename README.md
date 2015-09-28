@@ -1,4 +1,3 @@
-# weblbdesigns.dev
-Online portfolio | www.weblbdesigns.com
+# Online Portfolio | www.weblbdesigns.com
 
-Work in progress . . .  not finished yet. Expected completion is 9/20/15
+Interested in how I built my online portfolio located at www.weblbdesigns.com? Well here ya go, all the nitty gritty can be found right here! 
