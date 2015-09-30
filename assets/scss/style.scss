@@ -143,12 +143,8 @@ p {
     background-color: $body-bg;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
-    
-    @media(min-width:f80px) {
+    @media(min-width:480px) {
         background-attachment: fixed;
     }
     
@@ -229,11 +225,10 @@ p {
     background-image: url("/assets/img/header_bkg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     z-index:2;
+    width: 100%;
+    height: 100%;
+
     &:before {
         position: absolute;
         content: " ";
@@ -242,9 +237,7 @@ p {
         background: rgba(0, 0, 0, 0.4);
     }
     @include MQ(L) {
-        height: 100%;
         padding: 0px;
-        width: 100%;
         height: 100vh;
     }
     
@@ -617,6 +610,14 @@ footer.footer {
     list-style: none;
 
     &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        width: 2px;
+        margin-left: -1px;
+        background-color: darken(#eeeeee, 5%);
         @media(min-width:768px) {
             content: " ";
             position: absolute;
@@ -659,27 +660,46 @@ footer.footer {
             border-radius: 3px;
             -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.1);
             box-shadow: 0 1px 6px rgba(0,0,0,0.1);
-            
+            float: right;
+            width: 70%;
             @media(min-width:768px) {
                 float: left;
                 width: 44%;
             }
 
             &:before {
+                content: " ";
+                display: inline-block;
+                position: absolute;
+                top: 26px;
+                left: -15px;
+                border-top: 15px solid transparent;
+                border-left: 0 solid darken(#f2f4f4, 10%);
+                border-bottom: 15px solid transparent;
+                border-right: 15px solid darken(#f2f4f4, 10%);
                 @media(min-width:768px) {
                     content: " ";
                     display: inline-block;
                     position: absolute;
                     top: 26px;
-                    right: -15px;
+                    left: -15px;
                     border-top: 15px solid transparent;
-                    border-right: 0 solid darken(#f2f4f4, 10%);
+                    border-left: 0 solid darken(#f2f4f4, 10%);
                     border-bottom: 15px solid transparent;
-                    border-left: 15px solid darken(#f2f4f4, 10%);
+                    border-right: 15px solid darken(#f2f4f4, 10%);
                 }
             }
 
             &:after {
+                content: " ";
+                display: inline-block;
+                position: absolute;
+                top: 27px;
+                left: -14px;
+                border-top: 14px solid transparent;
+                border-left: 0 solid $base-color;
+                border-bottom: 14px solid transparent;
+                border-right: 14px solid $base-color;
                 @media(min-width:768px) {
                     content: " ";
                     display: inline-block;
@@ -721,7 +741,19 @@ footer.footer {
         }
 
         > .timeline-badge {
-            display: none;
+            display: block;
+                z-index: 100;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 30px;
+                height: 30px;
+                margin-left: -15px;
+                border-radius: 50% 50% 50% 50%;
+                text-align: center;
+                font-size: 30px;
+                line-height: 30px;
+                color: #ccc;
             
             @media(min-width:768px) {
                 display: block;
@@ -754,9 +786,9 @@ footer.footer {
             p {
                 color: $base-color;
                 text-shadow: 1px 1px lighten($base-color,10%); 
-                font-size: 20px;
+                font-size: 25px;
                 line-height: 25px;
-                margin: 0px;
+                margin: 0px  0px 0px 30px;
                 padding: 0px;
                 margin-top: 0px;
 
@@ -802,24 +834,6 @@ footer.footer {
         }
 
     }
-    > .timeline-image {
-            display: none;
-            
-            @media(min-width:768px) {
-               z-index: 100;
-                position: absolute;
-                left: 0;
-                width: 80px;
-                height: 80px;
-                margin-left: 0;
-                border: 7px solid #f1f1f1;
-                border-radius: 100%;
-                text-align: center;
-                color: #fff;
-                background-color: #642636;
-            }
-            
-        }
 
     > li.timeline-inverted  {
      
@@ -877,6 +891,7 @@ footer.footer {
             }           
             
             &:before {
+                
                 @media(min-width:768px) {
                     right: auto;
                     left: -15px;
@@ -886,6 +901,7 @@ footer.footer {
             }
 
             &:after {
+
                 @media(min-width:768px) {
                     right: auto;
                     left: -14px;
