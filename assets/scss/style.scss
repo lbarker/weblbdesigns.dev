@@ -682,11 +682,12 @@ footer.footer {
                     display: inline-block;
                     position: absolute;
                     top: 26px;
-                    left: -15px;
-                    border-top: 15px solid transparent;
-                    border-left: 0 solid darken(#f2f4f4, 10%);
+                    left: auto;
+                    right: -15px;
                     border-bottom: 15px solid transparent;
-                    border-right: 15px solid darken(#f2f4f4, 10%);
+                    border-right: 0 solid darken(#f2f4f4, 10%);
+                    border-top: 15px solid transparent;
+                    border-left: 15px solid darken(#f2f4f4, 10%);
                 }
             }
 
@@ -705,6 +706,7 @@ footer.footer {
                     display: inline-block;
                     position: absolute;
                     top: 27px;
+                    left: auto;
                     right: -14px;
                     border-top: 14px solid transparent;
                     border-right: 0 solid $base-color;
