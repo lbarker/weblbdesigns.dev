@@ -76,7 +76,78 @@ p {
   margin: 0 0 15px; }
 
 /*---------------------------------------------------------------------*/
-/*  1. BUTTON
+/*  2. PAGE LOADER
+/*---------------------------------------------------------------------*/
+.page-loader {
+  display: block;
+  background: transparent; }
+  .page-loader img {
+    display: none; }
+  .page-loader .loader {
+    display: none; }
+  @media (min-width: 768px) {
+    .page-loader {
+      display: block;
+      position: fixed;
+      background: #642639;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      z-index: 9998; }
+      .page-loader h1 {
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-size: 50px;
+        font-spacing: 2px;
+        text-align: center;
+        opacity: .5; }
+      .page-loader .loader {
+        display: block;
+        position: absolute;
+        border-left: 2px solid #ffffff;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        border-right: 2px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        height: 86px;
+        width: 86px;
+        left: 50%;
+        top: 50%;
+        margin: -43px 0 0 -43px;
+        text-indent: -9999em;
+        font-size: 10px;
+        z-index: 9999;
+        -webkit-animation: load 0.8s infinite linear;
+        -moz-animation: load 0.8s infinite linear;
+        ms-animation: load 0.8s infinite linear;
+        o-animation: load 0.8s infinite linear;
+        animation: load 0.8s infinite linear; }
+      .page-loader .loader,
+      .page-loader .loader:after {
+        border-radius: 50%;
+        width: 86px;
+        height: 86px; }
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+    @keyframes load {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } } }
+
+/*---------------------------------------------------------------------*/
+/*  3. BUTTON
 /*---------------------------------------------------------------------*/
 .btn.btn-lb {
   background-color: #642639;
@@ -167,7 +238,7 @@ p {
       background-color: #b7ada4; }
 
 /*---------------------------------------------------------------------*/
-/*  2. ANIMATION DELAY
+/*  4. ANIMATION DELAY
 /*---------------------------------------------------------------------*/
 .delayp1 {
   -webkit-animation-delay: 1s;
@@ -381,14 +452,14 @@ p {
   color: #ffffff; }
 
 /*---------------------------------------------------------------------*/
-/*  10.1. PORTFOLIO HOVER EFFECT 1 - GROW 
+/*  6. PORTFOLIO HOVER EFFECT 1 - GROW 
 /*---------------------------------------------------------------------*/
 .portfolio-item.grow > .inner-content:hover > img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2); }
 
 /*---------------------------------------------------------------------*/
-/*  8. TIMELINE
+/*  7. TIMELINE
 /*---------------------------------------------------------------------*/
 #timeline {
   background: #080304; }

@@ -1,4 +1,14 @@
 jQuery(document).ready(function(event){
+    /* ---------------------------------------------- /*
+    * Preloader
+    /* ---------------------------------------------- */
+
+    $(window).load(function ()
+    {
+        $('.loader').fadeOut();
+        $('.page-loader').delay(350).fadeOut('slow');
+    });
+
     /*---------------------------------------*/
     /*  JQUERY FOR PAGE SCROLLING FEATURE
     /*  requires jQuery Easing plugin

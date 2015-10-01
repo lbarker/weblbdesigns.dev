@@ -63,9 +63,103 @@ p {
     line-height: 1.6;
     margin: 0 0 15px;
 }
+/*---------------------------------------------------------------------*/
+/*  2. PAGE LOADER
+/*---------------------------------------------------------------------*/
+
+
+.page-loader {
+    display:block;
+    background: transparent;
+    
+    img {
+        display:none
+    }
+    .loader { 
+        display:none
+    }
+    @media(min-width:768px) {  
+        display:block;
+        position: fixed;
+        background: $base-color;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 9998;
+        h1 {
+        display:block;
+
+          position: absolute;
+          top: 30%;
+          left:0;
+          right:0;
+          color:#fff;
+          font-size:50px;
+          font-spacing:2px;
+          text-align:center;
+          opacity:.5;
+        }
+        .loader {
+          display:block;
+
+          position: absolute;
+          border-left: 2px solid #ffffff;
+          border-top: 2px solid rgba(255, 255, 255, 0.2);
+          border-right: 2px solid rgba(255, 255, 255, 0.2);
+          border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+          height: 86px;
+          width: 86px;
+          left: 50%;
+          top: 50%;
+          margin: -43px 0 0 -43px;
+          text-indent: -9999em;
+          font-size: 10px;
+          z-index: 9999;
+          -webkit-animation: load 0.8s infinite linear;
+             -moz-animation: load 0.8s infinite linear;
+               ms-animation: load 0.8s infinite linear;
+                o-animation: load 0.8s infinite linear;
+                  animation: load 0.8s infinite linear;
+        }
+        .loader,
+        .loader:after {
+          border-radius: 50%;
+          width: 86px;
+          height: 86px;
+        }
+
+        @-webkit-keyframes load {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes load {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+
+
+    }
+  
+
+}
+
 
 /*---------------------------------------------------------------------*/
-/*  1. BUTTON
+/*  3. BUTTON
 /*---------------------------------------------------------------------*/
 .btn.btn-lb {
     background-color: $base-color;
@@ -186,7 +280,7 @@ p {
 }
 
 /*---------------------------------------------------------------------*/
-/*  2. ANIMATION DELAY
+/*  4. ANIMATION DELAY
 /*---------------------------------------------------------------------*/
 .delayp1 {
   @include animation-delay(1s);
@@ -463,7 +557,7 @@ p {
 
 }
 /*---------------------------------------------------------------------*/
-/*  10.1. PORTFOLIO HOVER EFFECT 1 - GROW 
+/*  6. PORTFOLIO HOVER EFFECT 1 - GROW 
 /*---------------------------------------------------------------------*/
 .portfolio-item.grow {
     > .inner-content {
@@ -478,7 +572,7 @@ p {
 
 
 /*---------------------------------------------------------------------*/
-/*  8. TIMELINE
+/*  7. TIMELINE
 /*---------------------------------------------------------------------*/
 #timeline {
     background:darken($base-color,25%);
