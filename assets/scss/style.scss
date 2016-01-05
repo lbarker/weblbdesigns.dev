@@ -174,7 +174,18 @@ p {
     }
 }
 
+.btn.btn-lbb {
+    background-color: lighten($base-color, 10%);
+    color: #fff;
+    border-color: lighten($base-color, 15%);
+    text-transform: uppercase;
 
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: darken($base-color, 15%);
+    }
+}
 .section {
     background-color: #f2f4f4;
     
@@ -369,6 +380,10 @@ p {
                 @media(min-width:768px) {
                     font-size: 55px;
                 }
+            }
+
+            h3 {
+                line-height: 20px;
             }
             
             p.lead {
@@ -592,7 +607,36 @@ p {
     }
 }
 
+/*---------------------------------------------------------------------*/
+/*  6. HIRE ME
+/*---------------------------------------------------------------------*/
+#hire-me {
+    
+    > .section-inner {
+        .section-content {
+            a {
+                outline: none;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                color:$color-3;
+                &:hover, 
+                &:focus {
+                    outline: none;
+                    text-decoration: none;
+                    color:darken( $color-3, 40%);
 
+                }
+            }
+
+            p.contact-info {
+                opacity: .6;
+            }
+        }
+    }
+  
+}
 /*---------------------------------------------------------------------*/
 /*  9. FOOTER
 /*---------------------------------------------------------------------*/

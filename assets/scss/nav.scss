@@ -234,9 +234,17 @@ main {
 				color: lighten($base-color, 50%);
 			}
 		}
+
 	}
 	.social-icons {
 		margin-top:60px;
+	}
+	.contact-info {
+		p {
+			color: lighten($color-3,10%);
+			text-align: center;
+			margin-top: 20px;
+		}
 	}
 	.cd-contact-info {
 		text-align: left;

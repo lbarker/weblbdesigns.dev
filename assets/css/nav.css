@@ -242,6 +242,10 @@ main {
         color: #dfaaba; }
   .cd-nav .social-icons {
     margin-top: 60px; }
+  .cd-nav .contact-info p {
+    color: #e38b83;
+    text-align: center;
+    margin-top: 20px; }
   .cd-nav .cd-contact-info {
     text-align: left; }
     @media only screen and (min-width: 480px) {

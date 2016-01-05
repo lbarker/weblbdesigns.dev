@@ -158,6 +158,15 @@ p {
     color: #fff;
     background-color: #521f2e; }
 
+.btn.btn-lbb {
+  background-color: #89344e;
+  color: #fff;
+  border-color: #9b3b59;
+  text-transform: uppercase; }
+  .btn.btn-lbb:hover, .btn.btn-lbb:focus {
+    color: #fff;
+    background-color: #2d1119; }
+
 .section {
   background-color: #f2f4f4; }
   .section > .section-inner {
@@ -328,6 +337,8 @@ p {
         @media (min-width: 768px) {
           #intro .intro-body .intro-text h2 {
             font-size: 55px; } }
+      #intro .intro-body .intro-text h3 {
+        line-height: 20px; }
       #intro .intro-body .intro-text p.lead {
         color: #ffffff;
         font-size: 22px;
@@ -469,6 +480,23 @@ p {
       color: #b7ada4; }
       #timeline > .section-inner .section-content .section-title > .section-line {
         background-color: #b7ada4; }
+
+/*---------------------------------------------------------------------*/
+/*  6. HIRE ME
+/*---------------------------------------------------------------------*/
+#hire-me > .section-inner .section-content a {
+  outline: none;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: #D96459; }
+  #hire-me > .section-inner .section-content a:hover, #hire-me > .section-inner .section-content a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #531913; }
+#hire-me > .section-inner .section-content p.contact-info {
+  opacity: .6; }
 
 /*---------------------------------------------------------------------*/
 /*  9. FOOTER
@@ -1034,6 +1062,10 @@ main {
         color: #dfaaba; }
   .cd-nav .social-icons {
     margin-top: 60px; }
+  .cd-nav .contact-info p {
+    color: #e38b83;
+    text-align: center;
+    margin-top: 20px; }
   .cd-nav .cd-contact-info {
     text-align: left; }
     @media only screen and (min-width: 480px) {
